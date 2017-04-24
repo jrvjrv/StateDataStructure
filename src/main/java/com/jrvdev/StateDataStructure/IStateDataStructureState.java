@@ -1,5 +1,5 @@
 package com.jrvdev.StateDataStructure;
 
-public interface IState< IdType > {
+public interface IStateDataStructureState< IdType > {
     IdType getStateId();
 }

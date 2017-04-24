@@ -8,4 +8,5 @@
 # You can be specific with these rules
 #!/some/other/deep/path/**
 !.gitignore
+!build.gradle
 
