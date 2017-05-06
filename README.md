@@ -3,7 +3,7 @@
 A very simple generic state machine in java. 
 
 ## Code Example
-private class StateCounterState implements IStateDataStructureState< String >{
+```private class StateCounterState implements IStateDataStructureState< String >{
     private String _stateId;
     private String _stateName;
     private String _imagePath;
@@ -34,6 +34,7 @@ System.out.println( _stateMachine.getCurrentState().getName() );
 _stateMachine.transition( elrKeyStroke );
 // should print "4-4-7 1 Sq"
 System.out.println( _stateMachine.getCurrentState().getName() );
+```
 
 ## Motivation
 
