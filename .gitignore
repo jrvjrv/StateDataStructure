@@ -1,3 +1,4 @@
+# A white list .gitignore:
 # Ignore everything, then add specific subtrees/files
 # Ignore everything
 *
@@ -9,4 +10,5 @@
 #!/some/other/deep/path/**
 !.gitignore
 !build.gradle
+!README.md
 
