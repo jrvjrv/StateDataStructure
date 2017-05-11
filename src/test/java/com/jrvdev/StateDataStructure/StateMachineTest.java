@@ -155,6 +155,14 @@ public class StateMachineTest {
     public void cant_add_a_second_state_with_same_id() {
     }
     
+    @Test
+    public void empty_machine_has_null_state_data() {
+        StateMachine<Integer, KeyStroke, IntStateDataStructure> theMachine = StateMachine.create();
+        
+        assertNotNull(theMachine);
+        assertEquals(null, theMachine.getCurrentState());
+    }
+    
     // cant add transition to non-existent state
     // cant add transition from non-existent state
     // cant replace existing transition

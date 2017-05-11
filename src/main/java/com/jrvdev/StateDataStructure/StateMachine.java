@@ -59,7 +59,7 @@ public class StateMachine<IdType, TransitionType, StateData extends IStateDataSt
         return this;
     }
     public StateData getCurrentState() {
-        return _currentState.getStateData();
+        return (_currentState == null ) ? ( null ) : ( _currentState.getStateData() );
     }
     
     public StateMachine<IdType, TransitionType, StateData> transition( TransitionType transitionValue ) {
