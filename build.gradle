@@ -9,12 +9,15 @@ sourceCompatibility=1.5
 targetCompatibility=1.5
 
 task usage {
-  println ""
-  println "usage:"
-  println "  ./gradlew test      # compile & run unit tests"
-  println "  ./gradlew publish   # publish to local maven repository"
-  println ""
-  println ""
+  doFirst {
+    println ""
+    println "usage:"
+    println "  ./gradlew test                    # compile & run unit tests"
+    println "  ./gradlew publishToMavenLocal     # publish to local maven repository"
+    println "  and, of course, ./gradlew tasks   # get the list of available tasks"
+    println ""
+    println ""
+  }
 }
 
 publishing {
@@ -22,7 +25,7 @@ publishing {
         maven(MavenPublication) {
             groupId 'com.jrvdev'
             artifactId 'StateDataStructure'
-            version project.version
+            version "${project.version}"
 
             from components.java
         }
