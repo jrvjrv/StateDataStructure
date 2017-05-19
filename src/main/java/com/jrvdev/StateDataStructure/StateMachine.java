@@ -3,7 +3,9 @@ package com.jrvdev.StateDataStructure;
 import java.util.Map;
 import java.util.HashMap;
 
-public class StateMachine<IdType, TransitionType, StateData extends IStateDataStructureState<IdType> > {
+
+
+public class StateMachine< IdType, TransitionType, StateData extends IStateDataStructureState<IdType>> implements IStateMachine<IdType, TransitionType, StateData > {
     
     private class StateDataWrapper {
         private StateData _wrappedData;
@@ -36,7 +38,7 @@ public class StateMachine<IdType, TransitionType, StateData extends IStateDataSt
         _states = new HashMap<IdType, StateDataWrapper>();
     }
     
-    public StateMachine<IdType, TransitionType, StateData> addState( StateData newState ) {
+    public IStateMachine<IdType, TransitionType, StateData> addState( StateData newState ) {
         StateDataWrapper newWrapper = new StateDataWrapper( newState );
         _states.put( newState.getStateId(),  newWrapper );
         if ( _currentState == null ) {
@@ -76,4 +78,7 @@ public class StateMachine<IdType, TransitionType, StateData extends IStateDataSt
     public static<IdType, TransitionType, StateData extends IStateDataStructureState< IdType >> StateMachine<IdType, TransitionType, StateData> create() {
         return new StateMachine<IdType, TransitionType, StateData >();
     }
+
 }
+
+

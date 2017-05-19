@@ -8,12 +8,21 @@ project.version="0.51.00"
 sourceCompatibility=1.5
 targetCompatibility=1.5
 
+task usage {
+  println ""
+  println "usage:"
+  println "  ./gradlew test      # compile & run unit tests"
+  println "  ./gradlew publish   # publish to local maven repository"
+  println ""
+  println ""
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
             groupId 'com.jrvdev'
             artifactId 'StateDataStructure'
-            version '0.51.00'
+            version '0.52.00'
 
             from components.java
         }
