@@ -2,7 +2,7 @@
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
-project.version="0.51.00"
+project.version="0.52.00"
 // println "abc"            // printf debugging
 // println project.version
 sourceCompatibility=1.5
@@ -22,7 +22,7 @@ publishing {
         maven(MavenPublication) {
             groupId 'com.jrvdev'
             artifactId 'StateDataStructure'
-            version '0.52.00'
+            version project.version
 
             from components.java
         }
